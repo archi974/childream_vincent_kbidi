@@ -14,15 +14,15 @@
     </header>
     <main>
         <div class="recipe">
-            <div>
+            <div class="add_recipe">
                 <h1>Ajouter une recette</h1>
-                <form action="" id="formula">
+                <form id="formula">
                     <label>Formule :</label>
                     <input type="text" value="🍌*4+🥛*1+🍫 = Une fabuleuse tarte noix de coco" name="recipe_form" id="formula_recipe"/>
                     <label>Lien de l'image du résultat :</label>
                     <input type="url" value="https://www.svgrepo.com/svg/22661/market" name="link_picture_result" id="formula_link"/>
-                    <button type="submit" onClick={{addRecipe()}}>AJOUTER</button>
                 </form>
+                <button type="submit" onClick={{addRecipe()}}>AJOUTER</button>
             </div>
             <div class="recipe_display">
                 <h1>Recettes</h1>
@@ -32,10 +32,14 @@
         <div class="prepare_recipe">
             <h1>- Préparer une recette -</h1>
             <p>Cliquez sur les ingrédients à ajouter</p>
-            <span></span>
             <div>
                 <div>
-                    <a href="" class="food_button">🍇</a>
+                    <a href="#" onclick="" class="food_button">🍇</a>
+                    <a href="#" onclick="" class="food_button">🍈</a>
+                    <a href="#" onclick="" class="food_button">🍉</a>
+                    <a href="#" onclick="" class="food_button">🍊</a>
+                    <a href="#" onclick="" class="food_button">🍋</a>
+                    <a href="#" onclick="" class="food_button">🍌</a>
                 </div>
                 <button type="submit">PRÉPARER</button>
             </div>
@@ -44,7 +48,7 @@
     <footer>
         <h1>Bravo 🎉 Vous venez de préparer</h1>
         <p>Tarte noix de coco</p>
-        <img src="./images/Tarte-à-la-noix-de-coco.jpeg" alt="tarte noix de coco">
+        <img src="https://wordpress.potagercity.fr/wp-content/uploads/2019/02/Tarte-%C3%A0-la-noix-de-coco.jpg" alt="tarte noix de coco">
     </footer>
 </body>
 </html>

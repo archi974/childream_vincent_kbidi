@@ -20,6 +20,25 @@ header img {
     display: flex;
 }
 
+.add_recipe {
+    box-shadow: -5px -5px 15px grey;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.add_recipe label, input, button {
+    padding: 5px;
+}
+
+.add_recipe button {
+    margin: 10px 0px;
+    background-color: #0b972a;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
 #formula {
     display: flex;
     flex-direction: column;
@@ -27,10 +46,38 @@ header img {
 
 .recipe_display {
     display: flex;
+    flex-direction: column;
+}
+
+#container {
+    margin: 10px;
+}
+
+.recipe_pin {
+    display: flex;
+    height: 50px;
+    border-radius: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    box-shadow: -5px 5px 25px grey;
+}
+
+.recipe_pin:hover {
+    border: 3px solid  #0b972a;
+}
+
+.recipe_pin:nth-child(1n+4){
+    display: none;
 }
 
 .prepare_recipe {
     text-align: center;
+}
+
+.food_button {
+    text-decoration: none;
 }
 
 footer {
