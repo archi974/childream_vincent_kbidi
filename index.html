@@ -4,54 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="text/javascript" src="./script.js"></script>
+    <title>Childream | By Vincent K/BIDI</title>
 </head>
 <body>
     <header>
         <img src="./images/logo.png" alt="childream les recettes émoji">
     </header>
     <main>
-        <div class="add-recipe">
+        <div class="recipe">
             <div>
                 <h1>Ajouter une recette</h1>
-                <form action="">
+                <form action="" id="formula">
                     <label>Formule :</label>
-                    <input type="text" name="recipe_form"/>
+                    <input type="text" value="🍌*4+🥛*1+🍫 = Une fabuleuse tarte noix de coco" name="recipe_form" id="formula_recipe"/>
                     <label>Lien de l'image du résultat :</label>
-                    <input type="url" name="link_picture_result"/>
-                    <button type="submit">AJOUTER</button>
+                    <input type="url" value="https://www.svgrepo.com/svg/22661/market" name="link_picture_result" id="formula_link"/>
+                    <button type="submit" onClick={{addRecipe()}}>AJOUTER</button>
                 </form>
             </div>
-            <div>
+            <div class="recipe_display">
                 <h1>Recettes</h1>
-                <div></div>
+                <div id="container"></div>
             </div>
         </div>
-        <div>
+        <div class="prepare_recipe">
             <h1>- Préparer une recette -</h1>
             <p>Cliquez sur les ingrédients à ajouter</p>
             <span></span>
             <div>
                 <div>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                    <a href="" class="food_button">🍇</a>
                 </div>
                 <button type="submit">PRÉPARER</button>
             </div>
         </div>
     </main>
     <footer>
-        <h1>Bravo Vous venez de préparer</h1>
+        <h1>Bravo 🎉 Vous venez de préparer</h1>
         <p>Tarte noix de coco</p>
-        <img src="" alt="tarte noix de coco">
+        <img src="./images/Tarte-à-la-noix-de-coco.jpeg" alt="tarte noix de coco">
     </footer>
 </body>
 </html>
