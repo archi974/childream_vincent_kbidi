@@ -21,8 +21,8 @@
                     <input type="text" value="🍌*4+🥛*1+🍫 = Une fabuleuse tarte noix de coco" name="recipe_form" id="formula_recipe"/>
                     <label>Lien de l'image du résultat :</label>
                     <input type="url" value="https://www.svgrepo.com/svg/22661/market" name="link_picture_result" id="formula_link"/>
+                    <button class="green_button" type="submit" onclick="addRecipe(event)">AJOUTER</button>
                 </form>
-                <button class="green_button" type="submit" onClick={{addRecipe()}}>AJOUTER</button>
             </div>
             <div class="recipe_display">
                 <h1>Recettes</h1>
@@ -33,15 +33,114 @@
             <h1>- Préparer une recette -</h1>
             <p>Cliquez sur les ingrédients à ajouter</p>
             <div>
-                <div>
-                    <a href="#" onclick="" class="food_button">🍇</a>
-                    <a href="#" onclick="" class="food_button">🍈</a>
-                    <a href="#" onclick="" class="food_button">🍉</a>
-                    <a href="#" onclick="" class="food_button">🍊</a>
-                    <a href="#" onclick="" class="food_button">🍋</a>
-                    <a href="#" onclick="" class="food_button">🍌</a>
+                <div class="container_icon">
+                    <!-- <input type="button" onClick={{addComponent()}} value="🍇" class="food_button" />
+                    <input type="button" onClick={{addComponent()}} value="🍈" class="food_button" /> -->
+                    <button type="submit" onclick="addComponent(event)" value="0" class="food_button">🍇</button>
+                    <button type="submit" onclick="addComponent(event)" value="1" class="food_button">🍈</button>
+                    <button type="submit" onclick="addComponent(event)" value="2" class="food_button">🍉</button>
+                    <button type="submit" onclick="addComponent(event)" value="3" class="food_button">🍊</button>
+                    <!-- <button type="submit" onClick={{addComponent}} value="" class="food_button">🍋</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍌</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍍</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥭</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍎</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍏</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍐</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍑</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍒</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍓</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🫐</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥝</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍅</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🫒</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥥</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥑</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍆</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥔</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥕</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🌽</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥕</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🌶</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥒</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍄</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥜</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🌰</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍞</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥐</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥖</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥞</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🧀</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍖</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍗</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥓</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍔</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍟</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍕</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🌭</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🌮</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🌯</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥙</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥚</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍳</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥘</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍲</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥗</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍿</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍱</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍘</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍙</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍚</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍛</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍜</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍝</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍠</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍢</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍣</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍤</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍥</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍡</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍦</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍧</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍨</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍩</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍪</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🎂</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍰</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍫</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍬</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍭</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍮</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍯</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍼</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥛</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">☕</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍵</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍶</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍾</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍷</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍸</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍹</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍺</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍻</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥂</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥃</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍽</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🍴</button>
+                    <button type="submit" onClick={{addComponent}} value="" class="food_button">🥄</button> -->
                 </div>
-                <button class="green_button" type="submit">PRÉPARER</button>
+                <div>
+                    <form action="">
+                        <input type="text" id="first_component_food" disabled/>
+                        <input type="text" id="second_component_food" disabled/>
+                        <input type="text" id="third_component_food" disabled/>
+                    </form>
+                    <span id="first_count_quantity">0</span>
+                    <span id="second_count_quantity">0</span>
+                    <span id="third_count_quantity">0</span>
+
+                    <button class="green_button" id="button_add_food" type="submit">PRÉPARER</button>
+                </div>
             </div>
         </div>
     </main>

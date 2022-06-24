@@ -8,7 +8,9 @@
 }
 
 body {
-    margin: 5% 15%;
+    margin: 2.5% 15%;
+    /* font-family: Verdana, sans-serif; */
+    /* font-family: eb corp; */
 }
 
 header {
@@ -79,6 +81,7 @@ header img {
 }
 
 .recipe_pin:hover {
+    z-index: 100;
     border: 3px solid  #0b972a;
     transform: scale(1.025);
     transform-origin: center;
@@ -99,6 +102,7 @@ header img {
 
 .food_button {
     text-decoration: none;
+    border: none;
 }
 
 /* ===================== */
@@ -118,7 +122,7 @@ footer img {
     height: 100px;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 350px) {
     body {
         display: none;
     }
