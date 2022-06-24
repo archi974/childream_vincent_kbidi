@@ -115,6 +115,11 @@ header img {
     border: none;
     border-radius: 3px;
     margin: 2.5px;
+    text-align: center;
+}
+
+.input_select_food:nth-child(3){
+    margin-right: 5px;
 }
 
 /* ===================== */

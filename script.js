@@ -41,31 +41,24 @@ let btnAddFood = document.getElementById("button_add_food");
 // let i = 0;
 
 function addComponent(e) {
-// console.log(e);
-    // let firstCompFood = document.getElementById("first_component_food");
+    let firstCompFood = document.getElementById("first_component_food");
+    let firstCountQuantityFood = document.getElementById("first_count_quantity");
     // let secondCompFood = document.getElementById("second_component_food");
     // let thirdCompFood = document.getElementById("third_component_food");
     
+    let
     // i = 0;
     // let valuesComponent = document.getElementsByClassName("food_button");
     i = 0;
     i++;
-    console.log(e.target.innerHTML);
+    firstCompFood.value = e.target.value;
+    // console.log(e.target);
     // const check = localStorage.setItem(e.target.value, "first_component");
     // console.log(check);
+    // console.log(localStorage.getItem("first_component", e.target.value));
 
     count++;
-    // console.log(localStorage.getItem("first_component", e.target.value));
-    // if (e.target.value === localStorage.getItem("first_component")) {
-    //     console.log('TEST');
-    // firstCompFood.innerHTML = count;
-    // }
-    // else if () {
-    //     secondCompFood.innerHTML = count;
-    // } else {
-    //     thirdCompFood.innerHTML = count;
-    // }
+    firstCountQuantityFood.innerHTML = count;
 
-    // e.preventDefault();
-    // console.log(count);
+    e.preventDefault();
 }
