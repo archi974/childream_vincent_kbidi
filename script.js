@@ -46,7 +46,6 @@ function addComponent(e) {
     // let secondCompFood = document.getElementById("second_component_food");
     // let thirdCompFood = document.getElementById("third_component_food");
     
-    let
     // i = 0;
     // let valuesComponent = document.getElementsByClassName("food_button");
     i = 0;
@@ -57,8 +56,11 @@ function addComponent(e) {
     // console.log(check);
     // console.log(localStorage.getItem("first_component", e.target.value));
 
+    // firstCountQuantityFood.
+
     count++;
-    firstCountQuantityFood.innerHTML = count;
+    firstCountQuantityFood.value = count;
+    // firstCountQuantityFood.style.visibility = "visible";
 
     e.preventDefault();
 }

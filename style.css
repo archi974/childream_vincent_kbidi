@@ -108,6 +108,10 @@ header img {
     background-color: #fff;
 }
 
+.select_food_recipe {
+    height: 50px;
+}
+
 .input_select_food{
     height: 25px;
     width: 25px;
@@ -122,6 +126,26 @@ header img {
     margin-right: 5px;
 }
 
+.count_quantity{
+    background-color: #0b972a;
+    color: #fff;
+    height: 15px;
+    width: 35px;
+    border: none;
+    border-radius: 2px;
+    padding: 0;
+    margin-right: 5px;
+    /* visibility: hidden; */
+}
+
+.count_quantity:nth-child(3){
+    margin-right: 106px;
+}
+
+/* #first_count_quantity {
+    display: visible;
+} */
+
 /* ===================== */
 /* FOOTER */
 /* ===================== */
@@ -129,6 +153,7 @@ header img {
 
 footer {
     text-align: center;
+    margin-top: 35px;
 }
 
 footer p, h1, img{
