@@ -47,7 +47,7 @@ function addComponent(e) {
     // let thirdCompFood = document.getElementById("third_component_food");
     
     // i = 0;
-    let valuesComponent = document.getElementsByClassName("food_button");
+    // let valuesComponent = document.getElementsByClassName("food_button");
     i = 0;
     i++;
     console.log(e.target.innerHTML);
