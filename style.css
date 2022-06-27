@@ -135,7 +135,7 @@ header img {
     border-radius: 2px;
     padding: 0;
     margin-right: 5px;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .count_quantity:nth-child(3){

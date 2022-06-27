@@ -34,7 +34,7 @@
             <p>Cliquez sur les ingrédients à ajouter</p>
             <div>
                 <div class="container_icon">
-                    <input type="button" onclick="addComponent(event)" value="🍇" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" name="TEST" value="🍇" class="food_button" />
                     <input type="button" onclick="addComponent(event)" value="🍈" class="food_button" />
                     <input type="button" onclick="addComponent(event)" value="🍉" class="food_button" />
                     <input type="button" onclick="addComponent(event)" value="🍊" class="food_button" />
@@ -132,12 +132,12 @@
                         <input type="text" class="input_select_food" id="first_component_food" disabled/>
                         <input type="text" class="input_select_food" id="second_component_food" disabled/>
                         <input type="text" class="input_select_food" id="third_component_food" disabled/>
-                        <button class="green_button" id="button_add_food" type="submit">PRÉPARER</button>
+                        <button class="green_button" id="button_add_food" onclick="prepareRecipe(event)" type="submit">PRÉPARER</button>
                     </form>
                     <div>
-                        <input type="button" value="0" class="count_quantity" id="first_count_quantity" />
-                        <input type="button" value="0" class="count_quantity" id="second_count_quantity" />
-                        <input type="button" value="0" class="count_quantity" id="third_count_quantity" />
+                        <input type="button" value="0" onclick="changeComponent(event)" class="count_quantity" id="first_count_quantity" />
+                        <input type="button" value="0" onclick="changeComponent(event)" class="count_quantity" id="second_count_quantity" />
+                        <input type="button" value="0" onclick="changeComponent(event)" class="count_quantity" id="third_count_quantity" />
                     </div>
 
                 </div>

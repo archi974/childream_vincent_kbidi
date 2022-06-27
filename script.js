@@ -38,29 +38,59 @@ function addRecipe(e) {
 
 let count = 0;
 let btnAddFood = document.getElementById("button_add_food");
-// let i = 0;
+let currentFood;
+
+let foodId = "first_component_food";
+let countFoodId = "first_count_quantity";
 
 function addComponent(e) {
-    let firstCompFood = document.getElementById("first_component_food");
-    let firstCountQuantityFood = document.getElementById("first_count_quantity");
+    let firstCompFood = document.getElementById(foodId);
+    let firstCountQuantityFood = document.getElementById(countFoodId);
     // let secondCompFood = document.getElementById("second_component_food");
     // let thirdCompFood = document.getElementById("third_component_food");
-    
-    // i = 0;
-    // let valuesComponent = document.getElementsByClassName("food_button");
-    i = 0;
-    i++;
-    firstCompFood.value = e.target.value;
-    // console.log(e.target);
-    // const check = localStorage.setItem(e.target.value, "first_component");
-    // console.log(check);
-    // console.log(localStorage.getItem("first_component", e.target.value));
-
-    // firstCountQuantityFood.
 
     count++;
+    firstCompFood.value = e.target.value;
+    if (currentFood != e.target.value) {
+        currentFood = e.target.value;
+        count = 1;
+    }
+
     firstCountQuantityFood.value = count;
-    // firstCountQuantityFood.style.visibility = "visible";
+   
+    firstCountQuantityFood.style.visibility = "visible";
+    e.preventDefault();
+}
+
+let allFoodSelected = [];
+
+class FoodContainer {
+
+    constructor(countNumber, valueFood){
+        this.countNumber = countNumber;
+        this.valueFood = valueFood;
+    }
+}
+
+function changeComponent(e) {
+    
+    allFoodSelected.push(new FoodContainer(count, currentFood));
+    if (foodId === "second_component_food") {
+        foodId = "third_component_food";
+        countFoodId = "third_count_quantity";
+    } else {
+        foodId = "second_component_food";
+        countFoodId = "second_count_quantity"
+    }
+
+    e.preventDefault();
+}
+
+function prepareRecipe(e){
+    let recipeFormula = document.getElementById('formula_recipe');
+    // console.log(recipeFormula);
+
+
 
     e.preventDefault();
 }
