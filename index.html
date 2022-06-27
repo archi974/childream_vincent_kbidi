@@ -21,8 +21,8 @@
                     <input type="text" value="🍌*4+🥛*1+🍫 = Une fabuleuse tarte noix de coco" name="recipe_form" id="formula_recipe"/>
                     <label>Lien de l'image du résultat :</label>
                     <input type="url" value="https://www.svgrepo.com/svg/22661/market" name="link_picture_result" id="formula_link"/>
+                    <button class="green_button" type="submit" onclick="addRecipe(event)">AJOUTER</button>
                 </form>
-                <button class="green_button" type="submit" onClick={{addRecipe()}}>AJOUTER</button>
             </div>
             <div class="recipe_display">
                 <h1>Recettes</h1>
@@ -33,15 +33,114 @@
             <h1>- Préparer une recette -</h1>
             <p>Cliquez sur les ingrédients à ajouter</p>
             <div>
-                <div>
-                    <a href="#" onclick="" class="food_button">🍇</a>
-                    <a href="#" onclick="" class="food_button">🍈</a>
-                    <a href="#" onclick="" class="food_button">🍉</a>
-                    <a href="#" onclick="" class="food_button">🍊</a>
-                    <a href="#" onclick="" class="food_button">🍋</a>
-                    <a href="#" onclick="" class="food_button">🍌</a>
+                <div class="container_icon">
+                    <input type="button" onclick="addComponent(event)" name="TEST" value="🍇" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍈" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍉" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍊" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍋" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍌" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍍" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥭" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍎" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍏" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍐" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍑" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍒" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍓" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🫐" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥝" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍅" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🫒" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥥" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥑" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍆" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥔" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥕" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🌽" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥕" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🌶" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥒" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍄" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥜" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🌰" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍞" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥐" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥖" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥞" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🧀" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍖" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍗" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥓" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍔" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍟" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍕" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🌭" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🌮" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🌯" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥙" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥚" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍳" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥘" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍲" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥗" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍿" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍱" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍘" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍙" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍚" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍛" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍜" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍝" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍠" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍢" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍣" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍤" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍥" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍡" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍦" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍧" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍨" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍩" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍪" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🎂" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍰" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍫" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍬" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍭" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍮" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍯" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍼" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥛" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="☕" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍵" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍶" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍾" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍷" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍸" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍹" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍺" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍻" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥂" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥃" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍽" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍴" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🥄" class="food_button" />
                 </div>
-                <button class="green_button" type="submit">PRÉPARER</button>
+                <div>
+                    <form action="" class="select_food_recipe">
+                        <input type="text" class="input_select_food" id="first_component_food" disabled/>
+                        <input type="text" class="input_select_food" id="second_component_food" disabled/>
+                        <input type="text" class="input_select_food" id="third_component_food" disabled/>
+                        <button class="green_button" id="button_add_food" onclick="prepareRecipe(event)" type="submit">PRÉPARER</button>
+                    </form>
+                    <div>
+                        <input type="button" value="0" onclick="changeComponent(event)" class="count_quantity" id="first_count_quantity" />
+                        <input type="button" value="0" onclick="changeComponent(event)" class="count_quantity" id="second_count_quantity" />
+                        <input type="button" value="0" onclick="changeComponent(event)" class="count_quantity" id="third_count_quantity" />
+                    </div>
+
+                </div>
             </div>
         </div>
     </main>
