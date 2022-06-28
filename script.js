@@ -72,15 +72,19 @@ class FoodContainer {
     }
 }
 
+let recipeName = "";
+
 function changeComponent(e) {
-    
+    let firstCompFood = document.getElementById(foodId);
     allFoodSelected.push(new FoodContainer(count, currentFood));
-    if (foodId === "second_component_food") {
+    if(foodId === "first_component_food" && firstCompFood.value) {
+        foodId = "second_component_food";
+        countFoodId = "second_count_quantity";
+    } else if (foodId === "second_component_food" && firstCompFood.value) {
         foodId = "third_component_food";
         countFoodId = "third_count_quantity";
-    } else {
-        foodId = "second_component_food";
-        countFoodId = "second_count_quantity"
+    } else if (foodId === "third_component_food" && firstCompFood.value){
+        recipeName = prompt("Please enter a name for your recipe");
     }
 
     e.preventDefault();
@@ -88,9 +92,11 @@ function changeComponent(e) {
 
 function prepareRecipe(e){
     let recipeFormula = document.getElementById('formula_recipe');
-    // console.log(recipeFormula);
-
-
+    recipeFormula.value = 
+    allFoodSelected[0].valueFood + "*" + allFoodSelected[0].countNumber + "+" +
+    allFoodSelected[1].valueFood + "*" + allFoodSelected[1].countNumber + "+" +
+    allFoodSelected[2].valueFood + "*" + allFoodSelected[2].countNumber + " = " +
+    recipeName;
 
     e.preventDefault();
 }
