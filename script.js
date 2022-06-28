@@ -44,20 +44,18 @@ let foodId = "first_component_food";
 let countFoodId = "first_count_quantity";
 
 function addComponent(e) {
-    let firstCompFood = document.getElementById(foodId);
+    let compFood = document.getElementById(foodId);
     let firstCountQuantityFood = document.getElementById(countFoodId);
-    // let secondCompFood = document.getElementById("second_component_food");
-    // let thirdCompFood = document.getElementById("third_component_food");
 
     count++;
-    firstCompFood.value = e.target.value;
+    compFood.value = e.target.value;
     if (currentFood != e.target.value) {
         currentFood = e.target.value;
         count = 1;
     }
 
     firstCountQuantityFood.value = count;
-   
+
     firstCountQuantityFood.style.visibility = "visible";
     e.preventDefault();
 }
@@ -66,7 +64,7 @@ let allFoodSelected = [];
 
 class FoodContainer {
 
-    constructor(countNumber, valueFood){
+    constructor(countNumber, valueFood) {
         this.countNumber = countNumber;
         this.valueFood = valueFood;
     }
@@ -75,28 +73,41 @@ class FoodContainer {
 let recipeName = "";
 
 function changeComponent(e) {
-    let firstCompFood = document.getElementById(foodId);
+    let compFood = document.getElementById(foodId);
     allFoodSelected.push(new FoodContainer(count, currentFood));
-    if(foodId === "first_component_food" && firstCompFood.value) {
+    if (foodId === "first_component_food" && compFood.value) {
         foodId = "second_component_food";
         countFoodId = "second_count_quantity";
-    } else if (foodId === "second_component_food" && firstCompFood.value) {
+    } else if (foodId === "second_component_food" && compFood.value) {
         foodId = "third_component_food";
         countFoodId = "third_count_quantity";
-    } else if (foodId === "third_component_food" && firstCompFood.value){
-        recipeName = prompt("Please enter a name for your recipe");
+    } else if (foodId === "third_component_food" && compFood.value) {
+        foodId = "first_component_food";
+        countFoodId = "first_count_quantity";
     }
-
+    
     e.preventDefault();
 }
 
-function prepareRecipe(e){
-    let recipeFormula = document.getElementById('formula_recipe');
-    recipeFormula.value = 
-    allFoodSelected[0].valueFood + "*" + allFoodSelected[0].countNumber + "+" +
-    allFoodSelected[1].valueFood + "*" + allFoodSelected[1].countNumber + "+" +
-    allFoodSelected[2].valueFood + "*" + allFoodSelected[2].countNumber + " = " +
-    recipeName;
+function prepareRecipe(e) {
+    
+    if (allFoodSelected[2].valueFood && allFoodSelected[2].countNumber) {
+        let recipeFormula = document.getElementById('formula_recipe');
+        if (recipeName != null) {
+            recipeName = prompt("Veuillez entrer un nom pour votre recette :");
+            recipeFormula.value =
+                allFoodSelected[0].valueFood + "*" + allFoodSelected[0].countNumber + "+" +
+                allFoodSelected[1].valueFood + "*" + allFoodSelected[1].countNumber + "+" +
+                allFoodSelected[2].valueFood + "*" + allFoodSelected[2].countNumber + " = " +
+                recipeName;
+            
+        } else {
+            recipeName = prompt("Veuillez entrer un nom pour votre recette :");
+        }
+    } else {
+        alert("Vous devez d'abord validé le 3ème ingrédent");
+    }
+
 
     e.preventDefault();
 }
