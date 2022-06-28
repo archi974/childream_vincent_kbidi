@@ -13,29 +13,12 @@
         <img src="./images/logo.png" alt="childream les recettes émoji">
     </header>
     <main>
-        <div class="recipe">
-            <div class="add_recipe">
-                <h1>Ajouter une recette</h1>
-                <form id="formula">
-                    <label>Formule :</label>
-                    <!-- 🍌*4+🥛*1+🍫 = Une fabuleuse tarte noix de coco -->
-                    <input type="text" value="" name="recipe_form" id="formula_recipe"/>
-                    <label>Lien de l'image du résultat :</label>
-                    <input type="url" value="https://www.svgrepo.com/svg/22661/market" name="link_picture_result" id="formula_link"/>
-                    <button class="green_button" type="submit" onclick="addRecipe(event)">AJOUTER</button>
-                </form>
-            </div>
-            <div class="recipe_display">
-                <h1>Recettes</h1>
-                <div id="container"></div>
-            </div>
-        </div>
         <div class="prepare_recipe">
             <h1>- Préparer une recette -</h1>
             <p>Cliquez sur les ingrédients à ajouter</p>
             <div>
                 <div class="container_icon">
-                    <input type="button" onclick="addComponent(event)" name="TEST" value="🍇" class="food_button" />
+                    <input type="button" onclick="addComponent(event)" value="🍇" class="food_button" />
                     <input type="button" onclick="addComponent(event)" value="🍈" class="food_button" />
                     <input type="button" onclick="addComponent(event)" value="🍉" class="food_button" />
                     <input type="button" onclick="addComponent(event)" value="🍊" class="food_button" />
@@ -59,7 +42,6 @@
                     <input type="button" onclick="addComponent(event)" value="🥔" class="food_button" />
                     <input type="button" onclick="addComponent(event)" value="🥕" class="food_button" />
                     <input type="button" onclick="addComponent(event)" value="🌽" class="food_button" />
-                    <input type="button" onclick="addComponent(event)" value="🥕" class="food_button" />
                     <input type="button" onclick="addComponent(event)" value="🌶" class="food_button" />
                     <input type="button" onclick="addComponent(event)" value="🥒" class="food_button" />
                     <input type="button" onclick="addComponent(event)" value="🍄" class="food_button" />
@@ -142,6 +124,22 @@
                     </div>
 
                 </div>
+            </div>
+        </div>
+        <div class="recipe">
+            <div class="add_recipe">
+                <h1>Ajouter une recette</h1>
+                <form id="formula">
+                    <label>Formule :</label>
+                    <input type="text" value="" name="recipe_form" id="formula_recipe"/>
+                    <label>Lien de l'image du résultat :</label>
+                    <input type="url" value="https://www.svgrepo.com/svg/22661/market" name="link_picture_result" id="formula_link"/>
+                    <button class="green_button" type="submit" onclick="addRecipe(event)">AJOUTER</button>
+                </form>
+            </div>
+            <div class="recipe_display">
+                <h1>Recettes</h1>
+                <div id="container"></div>
             </div>
         </div>
     </main>
